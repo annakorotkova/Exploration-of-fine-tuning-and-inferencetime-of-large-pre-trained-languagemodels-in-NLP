@@ -3,9 +3,9 @@
 This repository contains all datasets, Python scripts, sweep configuration files and plots that were used in the scope of this master's thesis.
 
 To run the analyses, the following requirements must be met:
-- Python, version 3.8 (\cite{python3})
+- Python, version 3.8
 - Visual Studio Code, version 1.48 
-- Jupyter Notebook, version 6.1.4 (\cite{Jupyter.2016})
+- Jupyter Notebook, version 6.1.4
 
 This repository contains the following folders and files:
 
@@ -28,9 +28,9 @@ To execute the measurement of the fine-tuning and inference time, respectively, 
 - Run sweeps with the following commands in the terminal:
 	- To enable an execution of the measurements without crashing if the computer turn to standby mode, the command `screen -S mysession` should be used
         - `wandb sweep {}` with {} being the placeholder for the respective sweep name, e.g. sweep_wnli_cased.yaml
-            $\rightarrow$ \textit{wandb sweep sweep\_wnli\_cased.yaml}
+           -> `wandb sweep sweep_wnli_cased.yaml`
         - The terminal outputs some sweep characteristics (such as sweep ID or the link where the sweep can be viewed). 
-	  It also puts out a line of the following form: "Run sweep agent with: wandb agent anna\_korotkova/transformers-examples\_text-classification/o7ifco7k"
+	  It also puts out a line of the form `Run sweep agent with: wandb agent anna\_korotkova/transformers-examples\_text-classification/o7ifco7k`
           This line should be copied and executed in the terminal
 
 After following these steps, the fine-tuning for the respective sweep should be performed. Hereby should be noted that a wandb account is required in order to enable this process. The logged runs from my analysis can be retrieved at https://wandb.ai/anna_korotkova/transformers-examples_text-classification/sweeps?workspace=user-anna_korotkova

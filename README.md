@@ -54,3 +54,5 @@ Furthermore, the electronic annex incorporates the following files and sub-folde
 - *plot.zip* contains two sub-folders
 	- *fine-tuning time* contains all plots that were generated during the analysis of the fine-tuning time (run script *Analysis finetuning time.ipynb*)
 	- *inference time* contains all plots that were generated during the analysis of the inference time (run script *Analysis inference time.ipynb*)
+- *finetuning_time_table.xlsx*: Table of fine-tuning times grouped by model, number of examples (task size), maximum sequence length and batch size 
+- *inference_time_table.xlsx*: Table of inference times grouped by model, number of examples (task size), maximum sequence length and batch size 

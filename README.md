@@ -15,7 +15,7 @@ This repository contains the following folders and files:
 	- some superficial analyses of the GLUE tasks
 - https://github.com/annakorotkova/transformers: modified `transformers` module
 	- the module `transformers` by *huggingface* (version 3.0.0) was forked from https://github.com/huggingface/transformers
-	- added argument *finetuning_iters* in *training\_args.py* to pass number of iterations (default: 3)
+	- added argument *finetuning_iters* in *training\_args.py* to pass number of fine-tuning iterations (default: 3)
 	- measurement of the fine-tuning time was integrated in the script *trainer.py* inside the *train()* function
 	- measurement of inference time was integrated to the script *trainer.py* inside the *_prediction\_loop()* function, which was later used by the *evaluate()* function
 - *sweep.zip*: contains all sweeps that were used in the analyses

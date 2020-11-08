@@ -24,10 +24,10 @@ This repository contains the following folders and files:
 	  Those files are additionally marked with "inf" in their file name
 	- files that include "unc" in their name incorporate the configuration for time measurement for all regarded models, except for "distilbert-base-cased" and "bert-base-cased"
 	- files that include "cased" in their name incorporate the time measurement for "distilbert-base-cased" and "bert-base-cased"
-	  this distinction was performed since fine-tuning "distilbert-base-cased" and "bert-base-cased" failes on several GLUE tasks
+	  (this distinction was performed since fine-tuning "distilbert-base-cased" and "bert-base-cased" failes on several GLUE tasks)
 	- files that include "all" in their name incorporate the configuration for time measurement for all regarded models
-	- files that include "xlnet" in their name incorporate the configuration for time measurement for \texttt{xlnet-base-cased}
-	  this distinction was performed since \texttt{xlnet-base-cased} takes long fine-tuning times and could therefore not be fine-tuned for all GLUE tasks
+	- files that include "xlnet" in their name incorporate the configuration for time measurement for "xlnet-base-cased"
+	  (this distinction was performed since "xlnet-base-cased" takes long fine-tuning times and could therefore not be fine-tuned for all GLUE tasks)
 	- Note! For some configurations there only exists the configuration file for fine-tuning time measurement for "distilbert-base-cased" and "bert-base-cased". 
 	  This is the case for tasks where the fine-tuning of these models already failed. Hence, the inference time could not be measured.
 	- files containing the word "crashed" are configuration files created for runs that crashed before and should be rerun

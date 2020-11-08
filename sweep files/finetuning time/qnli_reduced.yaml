@@ -1,0 +1,50 @@
+program: /home/ubuntu/transformers/examples/text-classification/run_glue.py
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - "--do_train" 
+  - "--do_eval" 
+  - "--evaluate_during_training" 
+  - "--overwrite_output_dir"
+  - ${args}
+method: grid
+metric:
+  name: eval_acc
+  goal: maximize
+parameters:
+  #
+  # parameters to be optimized over
+  #
+  learning_rate:
+    value: 2e-5   # see Appendix of ALBERT paper
+  per_device_train_batch_size:
+    values: [32]   # 8 und 16 hier weggelassen, da es ansonsten zu lange dauert
+  max_seq_length:
+    values: [512]  # 128 & 256 haben nicht funktioniert --> alle gefailt (mit b.s. = 32)??
+  model_name_or_path:
+    values: ["bert-base-uncased", "bert-base-cased", 
+    "distilbert-base-uncased",  "distilbert-base-cased",
+    "roberta-base", 
+    "albert-base-v1"]
+  #
+  # fixed parameters
+  #
+  task_name: 
+    value: QNLI
+  data_dir: 
+    value: /home/ubuntu/QNLI    #### downloaded with download_glue_data.py (python3 download_glue_data.py)
+  output_dir: 
+    value: /tmp/QNLI/
+  num_train_epochs:
+    value: 1
+  logging_steps:
+    value: 10000 
+  weight_decay:
+    value: .01
+  adam_epsilon:
+    value: 1e-6
+  finetuning_iters:
+    value: 3   # less replications for bigger datasets
+  save_steps:
+    value: 2000  # default is 500; set higher values, otherwise the memory is full

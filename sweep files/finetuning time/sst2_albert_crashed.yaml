@@ -1,0 +1,47 @@
+program: /home/ubuntu/transformers/examples/text-classification/run_glue.py
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - "--do_train" 
+  - "--do_eval" 
+  - "--evaluate_during_training" 
+  - "--overwrite_output_dir"
+  - ${args}
+method: grid
+metric:
+  name: eval_acc
+  goal: maximize
+parameters:
+  #
+  # parameters to be optimized over
+  #
+  learning_rate:
+    value: 1e-5   # see Appendix of ALBERT paper
+  per_device_train_batch_size:
+    values: [8, 16, 32]
+  max_seq_length:
+    value: 512
+  model_name_or_path:
+    value: albert-base-v1
+  #
+  # fixed parameters
+  #
+  task_name: 
+    value: SST-2
+  data_dir: 
+    value: /home/ubuntu/SST-2    #### downloaded with download_glue_data.py (python3 download_glue_data.py)
+  output_dir: 
+    value: /tmp/SST-2/
+  num_train_epochs:
+    value: 1
+  logging_steps:
+    value: 100000 # sonst zu viele Werte für inference time
+  weight_decay:
+    value: .01
+  adam_epsilon:
+    value: 1e-6
+  finetuning_iters:
+    value: 3   #(weniger Replikationen bei größeren Datensätzen; von fünf auf drei runtergehen)
+  save_steps:
+    value: 20000  # default ist 500; höher setzen, sonst Speicher voll

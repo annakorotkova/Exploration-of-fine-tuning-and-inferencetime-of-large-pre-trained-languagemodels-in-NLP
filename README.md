@@ -51,8 +51,8 @@ After following these steps, the fine-tuning for the respective sweep should be 
 Furthermore, the electronic annex incorporates the following files and sub-folders:
 
 - *wandb time data* contains two sub-folders
-	- *finetuning*: contains contains all Excel datasets which incorporate the fine-tuning time data that was used in the analysis
-	- *inference time*: contains all Excel datasets which incorporate the inference time data which was used in the analysis
+	- the sub-folder *finetuning time* contains contains all Excel datasets which incorporate the fine-tuning time data that was used in the analysis
+	- the sub-folder *inference time* contains all Excel datasets which incorporate the inference time data which was used in the analysis
 	- All Excel files (in both subfolders) were downloaded from wandb (the respective sweeps at \url{https://wandb.ai/anna_korotkova/transformers-examples_text-classification/sweeps?workspace=user-anna_korotkova}). It should be noted that the files incorporated in both subfolder do not match exactly the wandb sweeps since some files were revised. This was done, so that no runs were included two times since some sweeps were rerun because they crashed the first time.
 - *Analysis finetuning time.ipynb*
 	- Descriptive analysis of the minimum fine-tuning time of finished runs for different hyperparameter combinations

@@ -9,15 +9,15 @@ To run the analyses, the following requirements must be met:
 
 This repository contains the following folders and files:
 
-- *Master's Thesis\_Korotkova.pdf*:  the scientific work in .pdf format
+- *Master's Thesis_Korotkova.pdf*:  the scientific work in .pdf format
 - *GLUE.ipynb*
 	- download GLUE tasks data following the instructions on https://github.com/nyu-mll/GLUE-baselines
 	- some superficial analyses of the GLUE tasks
 - https://github.com/annakorotkova/transformers: modified `transformers` module
 	- the module `transformers` by *huggingface* (version 3.0.0) was forked from https://github.com/huggingface/transformers
-	- added argument *finetuning_iters* in *training\_args.py* to pass number of fine-tuning iterations (default: 3)
+	- added argument *finetuning_iters* in *training_args.py* to pass number of fine-tuning iterations (default: 3)
 	- measurement of the fine-tuning time was integrated in the script *trainer.py* inside the *train()* function
-	- measurement of inference time was integrated to the script *trainer.py* inside the *_prediction\_loop()* function, which was later used by the *evaluate()* function
+	- measurement of inference time was integrated to the script *trainer.py* inside the *_prediction_loop()* function, which was later used by the *evaluate()* function
 - *sweep files* contains two folders
 	- the sub-folder *finetuning time* contains the sweep configuration files used in the analysis to perform the measuring of fine-tuning time
 	- the sub-folder *inference time* contains the sweep configuration files used in the analysis to perform the measuring of fine-tuning time. 
@@ -43,7 +43,7 @@ To execute the measurement of the fine-tuning and inference time, respectively, 
         - `wandb sweep {}` with {} being the placeholder for the respective sweep name, e.g. sweep_wnli_cased.yaml
            -> `wandb sweep sweep_wnli_cased.yaml`
         - The terminal outputs some sweep characteristics (such as sweep ID or the link where the sweep can be viewed). 
-	  It also puts out a line of the form `Run sweep agent with: wandb agent anna\_korotkova/transformers-examples\_text-classification/o7ifco7k`
+	  It also puts out a line of the form `Run sweep agent with: wandb agent anna_korotkova/transformers-examples_text-classification/o7ifco7k`
           This line should be copied and executed in the terminal
 
 After following these steps, the fine-tuning for the respective sweep should be performed. Hereby should be noted that a wandb account is required in order to enable this process. The logged runs from my analysis can be retrieved at https://wandb.ai/anna_korotkova/transformers-examples_text-classification/sweeps?workspace=user-anna_korotkova

@@ -46,7 +46,7 @@ To execute the measurement of the fine-tuning and inference time, respectively, 
 	  It also puts out a line of the form `Run sweep agent with: wandb agent anna_korotkova/transformers-examples_text-classification/o7ifco7k`
           This line should be copied and executed in the terminal
 
-After following these steps, the fine-tuning for the respective sweep should be performed. Hereby should be noted that a wandb account is required in order to enable this process. The logged runs from my analysis can be retrieved at https://wandb.ai/anna_korotkova/transformers-examples_text-classification/sweeps?workspace=user-anna_korotkova. The names of the respective sweeps include their respective sweep ID and some information about the sweep itself. The naming of these follows a similar to the one of the *sweep files*
+After following these steps, the fine-tuning for the respective sweep should be performed. Hereby should be noted that a wandb account is required in order to enable this process. The logged runs from my analysis can be retrieved at https://wandb.ai/anna_korotkova/transformers-examples_text-classification/sweeps?workspace=user-anna_korotkova. The names of the respective sweeps include their respective sweep ID and some information about the sweep itself. The naming of these follows a similar to the one of the *sweep files*.
 
 Furthermore, the electronic annex incorporates the following files and sub-folders:
 

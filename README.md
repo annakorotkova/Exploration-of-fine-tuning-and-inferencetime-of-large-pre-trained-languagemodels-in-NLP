@@ -5,7 +5,7 @@ This repository contains all datasets, Python scripts, sweep configuration files
 To run the analyses, the following requirements must be met:
 - Python, version 3.8
 - Visual Studio Code, version 1.48 
-- Jupyter Notebook, version 6.1.4
+- Jupyter Notebook, version 6.0.3
 
 This repository contains the following folders and files:
 

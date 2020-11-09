@@ -22,16 +22,16 @@ This repository contains the following folders and files:
 	- the sub-folder *finetuning time* contains the sweep configuration files used in the analysis to perform the measuring of fine-tuning time
 	- the sub-folder *inference time* contains the sweep configuration files used in the analysis to perform the measuring of fine-tuning time. 
 	  Those files are additionally marked with "inf" in their file name
-	- files that include "unc" in their name incorporate the configuration for time measurement for all regarded models, except for "distilbert-base-cased" and "bert-base-cased"
-	- files that include "cased" in their name incorporate the time measurement for "distilbert-base-cased" and "bert-base-cased"
-	  (this distinction was performed since fine-tuning "distilbert-base-cased" and "bert-base-cased" failes on several GLUE tasks)
-	- files that include "all" in their name incorporate the configuration for time measurement for all regarded models
-	- files that include "xlnet" in their name incorporate the configuration for time measurement for "xlnet-base-cased"
+	- files with "unc" in their name incorporate the configuration for time measurement for all regarded models, except for "distilbert-base-cased" and "bert-base-cased"
+	- files with "cased" in their name incorporate the time measurement for "distilbert-base-cased" and "bert-base-cased"
+	  (this distinction was performed since fine-tuning "distilbert-base-cased" and "bert-base-cased" failed on several GLUE tasks)
+	- files with "all" in their name incorporate the configuration for time measurement for all regarded models
+	- files with "xlnet" in their name incorporate the configuration for time measurement for "xlnet-base-cased"
 	  (this distinction was performed since "xlnet-base-cased" takes long fine-tuning times and could therefore not be fine-tuned for all GLUE tasks)
 	- Note! For some configurations there only exists the configuration file for fine-tuning time measurement for "distilbert-base-cased" and "bert-base-cased". 
 	  This is the case for tasks where the fine-tuning of these models already failed. Hence, the inference time could not be measured.
-	- files containing the word "crashed" are configuration files created for runs that crashed before and should be rerun
-	- files containing the word "reduced" contain a limited sweep since it is run for try out reasons (if prior runs failed for example)
+	- files with "crashed" in their name are configuration files created for runs that crashed before and should be rerun
+	- files with "reduced" in their name contain a limited sweep since it is run for try out reasons (if prior runs failed for example)
 
 Hereby, the fine-tuning and the measurement of the fine-tuning as well as inference time was performed on a virtual machine.
 To execute the measurement of the fine-tuning and inference time, respectively, the following steps were executed:

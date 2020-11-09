@@ -18,7 +18,7 @@ This repository contains the following folders and files:
 	- added argument *finetuning_iters* in *training_args.py* to pass number of fine-tuning iterations (default: 3)
 	- measurement of the fine-tuning time was integrated in the script *trainer.py* inside the *train()* function
 	- measurement of inference time was integrated to the script *trainer.py* inside the *_prediction_loop()* function, which was later used by the *evaluate()* function
-- *sweep files* contains two folders
+- *sweep files* contains two sub-folders
 	- the sub-folder *finetuning time* contains the sweep configuration files used in the analysis to perform the measuring of fine-tuning time
 	- the sub-folder *inference time* contains the sweep configuration files used in the analysis to perform the measuring of fine-tuning time. 
 	  Those files are additionally marked with "inf" in their file name

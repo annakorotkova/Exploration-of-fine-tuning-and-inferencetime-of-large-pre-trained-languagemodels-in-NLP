@@ -9,7 +9,6 @@ To run the analyses, the following requirements must be met:
 
 This repository contains the following folders and files:
 
-- *Master's Thesis_Korotkova.pdf*:  the scientific work in .pdf format
 - *GLUE.ipynb*
 	- download GLUE tasks data following the instructions on https://github.com/nyu-mll/GLUE-baselines
 	- some superficial analyses of the GLUE tasks

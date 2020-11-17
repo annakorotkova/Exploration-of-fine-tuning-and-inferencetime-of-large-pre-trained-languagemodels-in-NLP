@@ -34,7 +34,7 @@ This repository contains the following folders and files:
 
 Hereby, the fine-tuning and the measurement of the fine-tuning as well as inference time was performed on a virtual machine.
 To execute the measurement of the fine-tuning and inference time, respectively, the following steps were executed:
-- Cloning of the forked and modified repository https://github.com/annakorotkova/transformers
+- Cloning of the forked and modified repository https://github.com/annakorotkova/transformers (for details about the changes, see https://github.com/annakorotkova/transformers/blob/master/README_Anna's_Notes.md)
 - Adding downloaded GLUE files to workspace folder in Visual Studio Code
 - Creating sweep configurations
 - Run sweeps with the following commands in the terminal:
